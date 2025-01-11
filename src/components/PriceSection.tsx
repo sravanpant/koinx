@@ -43,12 +43,9 @@ export default function PriceSection() {
           </div>
         </div>
 
-        <div className="border-l border-[#DEE1E6] pl-6 hidden md:block">
-          <div className="text-base font-semibold mb-4">
-            Bitcoin Price Chart (24h)
-          </div>
-        </div>
+        
       </div>
+      <div className="border-t my-6" />
     </div>
   );
 }

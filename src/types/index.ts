@@ -23,6 +23,19 @@ export interface TrendingCoin {
   };
 }
 
+export interface TopCoin {
+  id: string;
+  symbol: string;
+  name: string;
+  image: string;
+  current_price: number;
+  price_change_percentage_24h: number;
+  sparkline_in_7d: {
+    price: number[];
+  };
+}
+
+
 export interface PriceHistoryData {
   timestamp: number;
   price: number;
@@ -43,4 +56,25 @@ export interface TimeRange {
 export interface PriceData {
   timestamp: number;
   price: number;
+}
+
+export interface BitcoinData {
+  market_data: {
+    current_price: {
+      usd: number;
+    };
+    high_24h: {
+      usd: number;
+    };
+    low_24h: {
+      usd: number;
+    };
+    market_cap: {
+      usd: number;
+    };
+    total_volume: {
+      usd: number;
+    };
+    market_cap_rank: number;
+  };
 }

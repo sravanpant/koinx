@@ -9,7 +9,6 @@ import Sentiment from './Sentiment'
 import AboutBitcoin from './AboutBitcoin'
 import Tokenomics from './Tokenomics'
 import Team from './Team'
-import YouMayLike from './YouMayLike'
 
 const TABS = [
   'Overview',
@@ -63,7 +62,7 @@ export default function MainContent() {
           <Team />
         </div>
 
-        <YouMayLike />
+        
       </div>
     </div>
   )
