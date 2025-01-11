@@ -29,7 +29,6 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="/crypto-taxes">Crypto Taxes</Link>
             <Link href="/free-tools">Free Tools</Link>

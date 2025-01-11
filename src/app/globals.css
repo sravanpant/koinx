@@ -56,7 +56,6 @@ swiper-button-next,
   opacity: 0.5 !important;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -75,7 +74,6 @@ swiper-button-next,
   background: #555;
 }
 
-/* styles/globals.css */
 .swiper-button-prev,
 .swiper-button-next {
   display: none;
@@ -85,18 +83,15 @@ swiper-button-next,
   height: auto !important;
 }
 
-/* Show navigation buttons when hovering over the slider */
 .swiper:hover .swiper-button-prev,
 .swiper:hover .swiper-button-next {
   display: flex;
 }
 
-/* Hide default Swiper navigation buttons */
 .swiper-button-prev::after,
 .swiper-button-next::after {
   display: none;
 }
-
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -125,7 +120,6 @@ swiper-button-next,
   cursor: not-allowed;
 }
 
-/* Hide default Swiper navigation buttons */
 .swiper-button-prev,
 .swiper-button-next {
   display: none !important;

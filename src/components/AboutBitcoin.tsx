@@ -6,7 +6,6 @@ export default function AboutBitcoin() {
       <h2 className="text-2xl font-semibold mb-6">About Bitcoin</h2>
 
       <div className="space-y-6">
-        {/* What is Bitcoin */}
         <div>
           <h3 className="font-bold mb-2.5">What is Bitcoin?</h3>
           <div className="text-[#3E424A] space-y-4">
@@ -54,8 +53,6 @@ export default function AboutBitcoin() {
             <div className="w-full h-[1px] bg-[#DEE1E6]" />
           </div>
         </div>
-
-        {/* Already Holding Bitcoin? */}
         <div>
           <h2 className="text-2xl font-semibold mb-6">
             Already Holding Bitcoin?
