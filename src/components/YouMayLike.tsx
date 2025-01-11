@@ -9,6 +9,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md"; // I
 import "swiper/css";
 import "swiper/css/navigation";
 import { TopCoin, TrendingCoin } from "@/types";
+import Image from "next/image";
 // import { Sparklines, SparklinesLine } from "react-sparklines";
 
 const generateSparklineSVG = (data: number[], color: string) => {
@@ -44,17 +45,17 @@ const YouMayLikeSlider = ({ coins }: { coins?: TrendingCoin[] }) => {
   const formatPrice = (price: number | string) => {
     try {
       // If price is already a number
-      if (typeof price === 'number') {
+      if (typeof price === "number") {
         return `$${price.toLocaleString(undefined, {
           minimumFractionDigits: 3,
           maximumFractionDigits: 3,
         })}`;
       }
-      
+
       // If price is a string
-      if (typeof price === 'string') {
+      if (typeof price === "string") {
         // Remove any non-numeric characters except decimal point
-        const numericValue = parseFloat(price.replace(/[^0-9.]/g, ''));
+        const numericValue = parseFloat(price.replace(/[^0-9.]/g, ""));
         return `$${numericValue.toLocaleString(undefined, {
           minimumFractionDigits: 3,
           maximumFractionDigits: 3,
@@ -64,7 +65,7 @@ const YouMayLikeSlider = ({ coins }: { coins?: TrendingCoin[] }) => {
       // If price is in any other format
       return price;
     } catch (error) {
-      console.error('Error formatting price:', error);
+      console.error("Error formatting price:", error);
       return price; // Return original price if formatting fails
     }
   };
@@ -87,10 +88,12 @@ const YouMayLikeSlider = ({ coins }: { coins?: TrendingCoin[] }) => {
             <SwiperSlide key={coin.item.id} className="!w-[250px]">
               <div className="border border-[#E3E3E3] rounded-lg p-4 hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-2 mb-2">
-                  <img
+                  <Image
                     src={coin.item.small}
                     alt={coin.item.name}
-                    className="w-6 h-6"
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 object-contain"
                   />
                   <span className="font-medium">{coin.item.symbol}</span>
                   <span
@@ -109,10 +112,12 @@ const YouMayLikeSlider = ({ coins }: { coins?: TrendingCoin[] }) => {
                 <div className="text-lg font-medium">
                   {formatPrice(coin.item.data.price)}
                 </div>
-                <img
+                <Image
                   src={coin.item.data.sparkline}
                   alt="Price chart"
-                  className="w-full h-16 mt-2"
+                  width={180}
+                  height={60}
+                  className="w-full h-16 mt-2 object-contain"
                 />
               </div>
             </SwiperSlide>
@@ -147,7 +152,13 @@ const TrendingCoinsSlider = ({ coins }: { coins?: TopCoin[] }) => (
           <SwiperSlide key={coin.id} className="!w-[250px]">
             <div className="border border-[#E3E3E3] rounded-lg p-4 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-2 mb-2">
-                <img src={coin.image} alt={coin.name} className="w-6 h-6" />
+                <Image
+                  src={coin.image}
+                  alt={coin.name}
+                  width={24}
+                  height={24}
+                  className="w-6 h-6 object-contain"
+                />
                 <span className="font-medium">{coin.symbol.toUpperCase()}</span>
                 <span
                   className={`ml-auto text-sm ${
@@ -163,13 +174,15 @@ const TrendingCoinsSlider = ({ coins }: { coins?: TopCoin[] }) => (
               <div className="text-lg font-medium">
                 ${coin.current_price.toLocaleString()}
               </div>
-              <img
+              <Image
                 src={generateSparklineSVG(
                   coin.sparkline_in_7d.price,
                   coin.price_change_percentage_24h > 0 ? "#14B079" : "#DC2626"
                 )}
                 alt="Price chart"
-                className="w-full h-16 mt-2"
+                width={180}
+                height={60}
+                className="w-full h-16 mt-2 object-contain"
               />
             </div>
           </SwiperSlide>

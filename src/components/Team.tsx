@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Team() {
   const team = [
     {
@@ -38,13 +40,18 @@ export default function Team() {
 
       <div className="space-y-4 ">
         {team.map((member) => (
-          <div key={member.name} className="p-6 bg-[#E8F4FD] rounded-lg ring-1 ring-blue-500">
+          <div
+            key={member.name}
+            className="p-6 bg-[#E8F4FD] rounded-lg ring-1 ring-blue-500"
+          >
             <div className="flex flex-col md:flex-row gap-6 ">
               <div className="text-center md:w-48 ">
-                <img
+                <Image
                   src={member.image}
                   alt={member.name}
-                  className="w-auto h-auto rounded-lg mx-auto mb-2"
+                  width={120}
+                  height={120}
+                  className="w-auto h-auto rounded-lg mx-auto mb-2 contain" 
                 />
                 <h3 className="font-semibold">{member.name}</h3>
                 <p className="text-sm text-[#788F9B]">{member.position}</p>

@@ -2,6 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { getCoinData } from "@/services/api";
+import Image from "next/image";
 
 export default function PriceSection() {
   const { data: coinData } = useQuery({
@@ -13,7 +14,7 @@ export default function PriceSection() {
     <div className="mb-6">
       <div className="flex items-center gap-8 mb-8">
         <div className="flex items-center gap-2">
-          <img src="https://swu7aik9l9.ufs.sh/f/w1oZdaymV9eMADqKlhXNX4cs5VF6vzZIeWb0P2ihk3wYx1fo" alt="Bitcoin" className="w-9 h-9" />
+          <Image src="https://swu7aik9l9.ufs.sh/f/w1oZdaymV9eMADqKlhXNX4cs5VF6vzZIeWb0P2ihk3wYx1fo" alt="Bitcoin" className="w-9 h-9" height={36} width={36} />
           <h1 className="text-2xl font-semibold">Bitcoin</h1>
           <span className="text-[#5D667B] text-sm font-semibold">BTC</span>
         </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutBitcoin() {
   return (
     <div className="mb-8 bg-white  p-6 rounded-lg">
@@ -61,10 +63,12 @@ export default function AboutBitcoin() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="p-4 rounded-lg bg-gradient-to-br from-[#79F1A4] to-[#0E5CAD] flex items-center gap-6">
-              <img
+              <Image
                 src="https://swu7aik9l9.ufs.sh/f/w1oZdaymV9eMRd17LFPT8ZbjJYpyxt1LqNrVwQd6eoE70UhG"
                 alt="Calculate Profits"
-                className="w-32 h-32 rounded-lg"
+                width={128}
+                height={128}
+                className="w-32 h-32 rounded-lg contain"
               />
               <div className="text-white">
                 <h3 className="font-bold text-lg mb-2">
@@ -77,10 +81,12 @@ export default function AboutBitcoin() {
             </div>
 
             <div className="p-4 rounded-lg bg-gradient-to-br from-[#FF9865] to-[#EF3031] flex items-center gap-6">
-              <img
+              <Image
                 src="https://swu7aik9l9.ufs.sh/f/w1oZdaymV9eMdes6B9hEwjTi4yYMGfNupQ6OHU1ZblKCo0Ac"
                 alt="Calculate Tax"
-                className="w-32 h-32 rounded-lg"
+                width={128}
+                height={128}
+                className="w-32 h-32 rounded-lg contain"
               />
               <div className="text-white">
                 <h3 className="font-bold text-lg mb-2">

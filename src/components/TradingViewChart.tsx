@@ -1,9 +1,41 @@
 // BitcoinChart.tsx
 import React, { useEffect, useRef } from 'react';
 
+// Define the widget configuration interface
+interface TradingViewWidgetConfig {
+  width: string;
+  height: string;
+  symbol: string;
+  interval: string;
+  timezone: string;
+  theme: string;
+  style: string;
+  locale: string;
+  toolbar_bg: string;
+  enable_publishing: boolean;
+  allow_symbol_change: boolean;
+  container_id: string;
+  hide_side_toolbar: boolean;
+  studies: string[];
+  save_image: boolean;
+  show_popup_button: boolean;
+  popup_width: string;
+  popup_height: string;
+}
+
+// Define the widget constructor
+interface TradingViewWidgetConstructor {
+  new (config: TradingViewWidgetConfig): unknown;
+}
+
+// Define the TradingView interface
+interface TradingView {
+  widget: TradingViewWidgetConstructor;
+}
+
 declare global {
   interface Window {
-    TradingView: any;
+    TradingView: TradingView;
   }
 }
 

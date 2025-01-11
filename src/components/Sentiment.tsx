@@ -51,7 +51,7 @@ const SentimentCard: React.FC = () => {
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-4">
           <h3 className="text-lg font-medium text-gray-700">Key Events</h3>
-          <IoInformationCircleOutline className="text-gray-400" />
+          <IoInformationCircleOutline size={20} className="text-gray-400" />
         </div>
         
         <div className="flex gap-4 overflow-x-auto">
@@ -78,7 +78,7 @@ const SentimentCard: React.FC = () => {
       <div>
         <div className="flex items-center gap-2 mb-6">
           <h3 className="text-lg font-medium text-gray-700">Analyst Estimates</h3>
-          <IoInformationCircleOutline className="text-gray-400" />
+          <IoInformationCircleOutline size={20} className="text-gray-400" />
         </div>
 
         <div className="flex items-center gap-8">

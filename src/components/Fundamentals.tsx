@@ -1,3 +1,5 @@
+import { IoInformationCircleOutline } from "react-icons/io5";
+
 export default function Fundamentals() {
   const fundamentals = [
     {
@@ -38,7 +40,7 @@ export default function Fundamentals() {
     <div className="mb-8">
       <div className="flex items-center gap-2 mb-4">
         <h2 className="text-2xl font-semibold">Fundamentals</h2>
-        <img src="/info-icon.svg" alt="Info" className="w-5 h-5" />
+        <IoInformationCircleOutline size={20} className="text-gray-400" />
       </div>
 
       <div className="grid md:grid-cols-2 gap-x-16">
